@@ -1,12 +1,12 @@
-#ifndef DATASTRUCTURES_UTILITIES_H
-#define DATASTRUCTURES_UTILITIES_H
-
+#ifndef ALGORITHMS_UTILITIES_H
+#define ALGORITHMS_UTILITIES_H
 
 template<class T>
 struct node {
     node<T> *next;
     T data;
 };
+
 
 template <class T>
 static void swap(T &a, T &b) {
@@ -15,4 +15,4 @@ static void swap(T &a, T &b) {
     b = temp;
 }
 
-#endif //DATASTRUCTURES_UTILITIES_H
+#endif //ALGORITHMS_UTILITIES_H

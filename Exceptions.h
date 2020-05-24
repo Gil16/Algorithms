@@ -1,6 +1,5 @@
-#ifndef DATASTRUCTURES_EXCEPTIONS_H
-#define DATASTRUCTURES_EXCEPTIONS_H
-
+#ifndef ALGORITHMS_EXCEPTIONS_H
+#define ALGORITHMS_EXCEPTIONS_H
 
 #include <exception>
 
@@ -42,4 +41,4 @@ class AlreadyExistException: public exception {
     }
 };
 
-#endif //DATASTRUCTURES_EXCEPTIONS_H
+#endif //ALGORITHMS_EXCEPTIONS_H

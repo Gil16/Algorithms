@@ -1,6 +1,5 @@
-#ifndef DATASTRUCTURES_LINKEDLIST_H
-#define DATASTRUCTURES_LINKEDLIST_H
-
+#ifndef ALGORITHMS_LINKEDLIST_H
+#define ALGORITHMS_LINKEDLIST_H
 
 #include "Utilities.h"
 #include "Exceptions.h"
@@ -95,4 +94,4 @@ LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>& list) {
     return *this;
 }
 
-#endif //DATASTRUCTURES_LINKEDLIST_H
+#endif //ALGORITHMS_LINKEDLIST_H

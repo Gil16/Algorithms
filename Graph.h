@@ -1,5 +1,5 @@
-#ifndef ALGORITHMS_UTILITIES_H
-#define ALGORITHMS_UTILITIES_H
+#ifndef ALGORITHMS_GRAPH_H
+#define ALGORITHMS_GRAPH_H
 
 #include "LinkedList.h"
 #include "Exceptions.h"
@@ -9,7 +9,19 @@ protected:
     LinkedList<int> *graph;
     int v_size;
 
-    bool findEdge(int v, int w);
+    bool findEdge(int v, int w) {
+        if(graph[v-1].getListSize() == 0) {
+            return false;
+        }
+        node<int> *tmp = graph[v-1].getListHead();
+        while(tmp->next != nullptr) {
+            if(tmp->data == w) {
+                return true;
+            }
+            tmp = tmp->next;
+        }
+        return false;
+    }
 public:
     explicit Graph(int v) {
         graph = new LinkedList<int>[v];
@@ -18,22 +30,8 @@ public:
     virtual ~Graph() { delete[] graph; }
 
     virtual void addEdge(int v, int w) = 0;
+    void BFS(int src);
 };
-
-
-bool Graph::findEdge(int v, int w) {
-    if(graph[v-1].getListSize() == 0) {
-        return false;
-    }
-    node<int> *tmp = graph[v-1].getListHead();
-    while(tmp->next != nullptr) {
-        if(tmp->data == w) {
-            return true;
-        }
-        tmp = tmp->next;
-    }
-    return false;
-}
 
 
 class UnDirectedGraph : public Graph {
@@ -62,4 +60,4 @@ public:
     };
 };
 
-#endif //ALGORITHMS_UTILITIES_H
+#endif //ALGORITHMS_GRAPH_H
