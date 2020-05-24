@@ -22,6 +22,7 @@ protected:
         }
         return false;
     }
+    void DFSVisited(int v, bool visited[]);
 public:
     explicit Graph(int v) {
         graph = new LinkedList<int>[v];
@@ -31,6 +32,7 @@ public:
 
     virtual void addEdge(int v, int w) = 0;
     void BFS(int src);
+    void DFS();
 };
 
 
