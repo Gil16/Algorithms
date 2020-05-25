@@ -22,7 +22,7 @@ protected:
         }
         return false;
     }
-    void DFSVisited(int v, bool visited[]);
+    void DFSVisited(int v, bool visited[], int **find_retreat);
 public:
     explicit Graph(int v) {
         graph = new LinkedList<int>[v];
